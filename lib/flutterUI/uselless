@@ -1,0 +1,23 @@
+ showModalBottomSheet(
+                                context: context,
+                                builder: (context) {
+                                  return Padding(
+                                    padding: EdgeInsets.all(16),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize
+                                          .min, //it will minimize the height
+                                      children: [
+                                        Text(
+                                          'Select a meal category to add ${food['name']}',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold,
+                                              color: const Color.fromARGB(
+                                                  255, 30, 7, 240)),
+                                        ),
+                                        _buildMealCategoryButton(context, 'Breakfast', food)
+                                      ],
+                                    ),
+                                  );
+                                });
